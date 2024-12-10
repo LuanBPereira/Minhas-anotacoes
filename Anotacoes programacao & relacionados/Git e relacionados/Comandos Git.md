@@ -31,7 +31,7 @@ ___
     - Exemplo: `git commit -m "Adiciona nova funcionalidade"`
     - Cria um commit com as mudanças, incluindo uma mensagem explicativa.
 
-> [!NOTE]
+> [!NOTE] ARRUMAR DEPOIS!
 > git branch -r - vê as branchs remotas que existem
 > 
 > git push —delete nome-da-branch - deleta uma branch remota
