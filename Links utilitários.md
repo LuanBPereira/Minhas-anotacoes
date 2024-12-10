@@ -5,7 +5,6 @@ React → [https://techguide.sh/pt-BR/path/react/](https://techguide.sh/pt-BR/pa
 Node.js → [https://techguide.sh/pt-BR/path/nodejs/](https://techguide.sh/pt-BR/path/nodejs/)
 Java → [https://techguide.sh/pt-BR/path/java/](https://techguide.sh/pt-BR/path/java/)
 Python → [https://techguide.sh/pt-BR/path/python/](https://techguide.sh/pt-BR/path/python/)
-___
 
 link download Logseq para anotações → [https://logseq.com/](https://logseq.com/)
 

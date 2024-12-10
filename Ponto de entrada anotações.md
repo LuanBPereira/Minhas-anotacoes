@@ -19,6 +19,7 @@ Seja para explorar algo novo ou revisitar informações importantes, este é o l
 - [[Memória Heap e Stack|Página sobre memória Heap e Stack]]
 - [[Logger (log4j) Java|Página sobre Logger (log4j) em Java]]
 - [[Modelagem de dados|Página sobre modelagem de dados]]
+- [[DOM JS|Página sobre manipulação de DOM]]
 - 
 ___
 

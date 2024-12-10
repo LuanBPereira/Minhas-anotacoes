@@ -1,33 +1,162 @@
 ___
-setInterval/clearInterval - se precisar de fazer algo como um temporizador ou algo ocorrer durante um certo intervalo, pesquisar sobre esses dois.
-caso eu precise mexer com formatação de data - [https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Date](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Date)
+
+> [!NOTE] Importante!
+> setInterval/clearInterval - se precisar de fazer algo como um temporizador ou algo ocorrer durante um certo intervalo, pesquisar sobre esses dois.
+> caso eu precise mexer com formatação de data - [https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Date](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Date)
+
+### **Objeto `document`**
+
+ Representa todo o documento HTML carregado em uma página web. É o ponto de entrada principal para acessar ou manipular o conteúdo do DOM.
+ 
+**Exemplo**:
+```JavaScript
+console.log(document); // Mostra o HTML completo da página no console.
+```    
+---
+
+#### **Métodos de Seleção de Elementos**
+
+##### 1. `document.querySelector()`
+
+ Retorna o **primeiro elemento** que corresponde ao seletor CSS fornecido (classe, ID, tag, etc.).
+ 
+- **Uso**:
+    - Seletor de **classe**: `'.classe'`.
+    - Seletor de **ID**: `'#id'`.
+    - Seletor de **tag**: `'tag'`.
+    - Seletor combinado: `'div.classe'` ou `'#id .classe'`.
+
+**Exemplo**:
+```JavaScript
+const elemento = document.querySelector('.classe'); // Seleciona o primeiro elemento com a classe "classe".
+```
 ___
 
-document - bem dizer é o HTML, Arquivo do HTML. Se digitarmos só "document" no console de uma página, retorna o HTML da página inteira.
+##### 2. `document.querySelectorAll()`
 
-document.querySelector(’id/class/tag’) - pega o primeiro elemento dado uns dos params.
+Retorna uma **NodeList** com todos os elementos que correspondem ao seletor CSS fornecido.
+
+- **Diferente de `querySelector`**:
+    - Retorna **todos os elementos** em vez de apenas o primeiro.
+    - A NodeList é iterável e aceita métodos como `forEach`.
+
+**Exemplo**:
+ ```JavaScript
+const elementos = document.querySelectorAll('.classe'); // Seleciona todos os elementos com a classe "classe". 
+elementos.forEach(el => console.log(el)); // Itera sobre os elementos.
+```
+___
+
+##### 3. `document.getElementById()`
+
+Retorna um **único elemento** com o ID fornecido. IDs devem ser únicos no documento.
+
+**Exemplo**:
 ```JavaScript
-// Seleciona o primeiro elemento com a classe "classe".
-const elemento = document.querySelector('.classe'); 
+const elemento = document.getElementById('meuId'); // Seleciona o elemento com o ID "meuId". 
+console.log(elemento);
+```
+___
+
+##### 4. `document.getElementsByClassName()`
+
+Retorna uma **HTMLCollection** com todos os elementos que possuem a classe fornecida.
+- **Diferente de `querySelectorAll`**:
+    - Não é iterável diretamente (é necessário converter para array para usar métodos como `forEach`).
+    - É mais rápido, mas menos flexível (não suporta seletores complexos).
+
+**Exemplo**:
+```JavaScript
+const elementos = document.getElementsByClassName('classe'); // Seleciona todos os elementos com a classe "classe". 
+Array.from(elementos).forEach(el => console.log(el)); // Converte para array e itera.
+```
+___
+
+##### 5. `document.getElementsByTagName()`
+
+Retorna uma **HTMLCollection** com todos os elementos de um determinado tipo de tag (ex.: `div`, `p`, `span`).
+
+**Exemplo**:
+```JavaScript
+const tags = document.getElementsByTagName('div'); // Seleciona todas as tags <div>. 
+Array.from(tags).forEach(tag => console.log(tag)); // Itera sobre as tags.
 ```
 
-document.querySelectorAll(’id, class, tag’) retorna todos os elementos dado um dos params.
-```JavaScript
-// Selecionando todos os elementos com classe 'exemplo'
-const todos = document.querySelectorAll('.exemplo');
-```
+---
 
-getElementById: Busca um elemento único pelo seu ID (deve ser único no documento).
-getElementsByClassName: Retorna uma coleção de elementos com uma determinada classe.
-getElementsByTagName: Retorna uma coleção de elementos de um tipo específico de tag.
+#### **Diferenças Importantes**
+
+1. **`querySelector` vs. `getElementById`**:
+    
+    - `querySelector` usa seletores CSS e é mais flexível.
+    - `getElementById` é mais rápido, mas só funciona com IDs.
+  
+2. **`querySelectorAll` vs. `getElementsByClassName`/`getElementsByTagName`**:
+    
+    - `querySelectorAll` retorna uma **NodeList** (suporta `forEach` diretamente).
+    - Os outros dois retornam uma **HTMLCollection** (precisa ser convertida para array para usar métodos de array).
+---
+
+#### **Métodos e Propriedades Adicionais**
+
+##### 1. `document.forms`
+
+Retorna uma coleção de todos os formulários no documento.
+
+**Exemplo:**
 ```JavaScript
- // Seleciona o elemento com o ID "meuId".
-const elemento = document.getElementById('meuId');
- // Retorna uma coleção de elementos com a classe "classe".
-const elementos = document.getElementsByClassName('classe');
- // Retorna uma coleção de elementos com a classe "classe".
-const tags = document.getElementsByTagName('div');
+const formularios = document.forms; // Retorna todos os formulários do HTML.
+console.log(formularios); // [<form id="form1">, <form id="form2">]
 ```
+___
+
+##### 2. `document.images`
+
+Retorna uma coleção de todas as imagens no documento.
+
+**Exemplo:**
+```JavaScript
+const imagens = document.images; // Retorna todas as imagens do HTML
+console.log(imagens); // [<img src="image1.jpg">, <img src="image2.jpg">]
+```
+___
+
+##### 3. `document.links`
+
+Retorna uma coleção de todos os links (`<a>`) no documento.
+
+**Exemplo:**
+```JavaScript
+const links = document.links; // Retorna apenas os <a> com 'href' do HTML
+console.log(links); /* [<a href="https://example.com">, 
+<a href="https://google.com">] */
+```
+___
+
+##### 4. `document.body`
+
+Referência ao elemento `<body>` do documento.
+
+**Exemplo:**
+```JavaScript
+console.log(document.body); // Retorna o conteúdo do <body>.
+```
+---
+
+#### **Resumo**
+
+| Método                   | Retorna                | Exemplo de Uso                              |
+| ------------------------ | ---------------------- | ------------------------------------------- |
+| `querySelector`          | Primeiro elemento      | `document.querySelector('.classe')`         |
+| `querySelectorAll`       | NodeList (todos)       | `document.querySelectorAll('.classe')`      |
+| `getElementById`         | Elemento único         | `document.getElementById('id')`             |
+| `getElementsByClassName` | HTMLCollection (todos) | `document.getElementsByClassName('classe')` |
+| `getElementsByTagName`   | HTMLCollection (todos) | `document.getElementsByTagName('div')`      |
+| `document.forms`         | Coleção de formulários | `document.forms`                            |
+| `document.images`        | Coleção de imagens     | `document.images`                           |
+| `document.links`         | Coleção de links       | `document.links`                            |
+| `document.body`          | Corpo do documento     | `document.body`                             |
+___
 
 ## Método `addEventListener`
 
@@ -382,7 +511,151 @@ audioElement.volume = 0.5 // Define o volume para a metade (50%)
 ```
 ___
 
-## Propriedades node (continuar a desenvolver)
+## Propriedades node 
 
-#### Propriedade parentNode 
+#### 1. nodeName
 
+- Retorna o nome do nó.
+- Para elementos, geralmente retorna o nome da tag em MAIÚSCULAS (ex: `DIV`, `SPAN`).
+- Para nós de texto, retorna `#text`.
+- Para nós do documento, retorna `#document`.
+```JavaScript
+let div = document.createElement('div')
+console.log(div.nodeName) // "DIV"
+```
+___
+
+#### 2. nodeType
+
+- Retorna o tipo de nó como um número.
+	- `1`: Elemento (Ex: `<div>`,`<p>`)
+	- `3`: Nó de texto
+	- `8`: Comentário
+	- `9`: Documento
+- Útil para distinguir entre diferentes tipos de nós.
+```JavaScript
+let text = document.createTextNode('Hello')
+console.log(text.nodeType) // 3
+```
+___
+
+#### 3. nodeValue
+
+- Retorna ou define o valor de um nó.
+- Para nós de texto ou comentário, retorna o texto dentro do nó.
+- Para elementos, geralmente é `null` (use `innerText` ou `innerHTML` para texto de elementos).
+  ```JavaScript
+  let comment = document.createComment('Este é um comentário')
+  console.log(comment.nodeValue) // "Este é um comentário"
+```
+___
+
+#### 4. childNodes
+
+- Retorna uma coleção NodeList contendo todos os filhos (nodes) diretos do nó atual, incluindo nós de texto e comentários.
+- Isso incluí até mesmo espaços em branco entre elementos, pois são tratados como nós de texto.
+  ```JavaScript
+  let ul = document.querySelector('ul')
+  console.log(ul.childNodes) // NodeList de nós filhos
+```
+___
+
+#### 5. parentNode
+
+- Retorna o nó pai do nó atual.
+- Retorna `null` para o nó raiz (document).
+  ```JavaScript
+  let li = document.querySelector('li')
+  console.log(li.parentNode) // <ul> (o pai do <li>)
+```
+___
+
+#### 6. firstChild e lastChild
+
+- `firstChild`: Retorna o primeiro nó filho.
+- `lastChild`: Retorna o último nó filho.
+- Ambos incluem de nós de texto e comentário.
+  ```JavaScript
+  let ul = document.querySelector('ul')
+  console.log(ul.firstChild) // Pode ser um nó de texto ou o primeiro elemento
+  console.log(ul.lastChild) // Último nó
+```
+___
+
+#### 7. previousSibling e nextSibling
+
+- `previousSibling`: Retorna o nó anterior ao atual no mesmo nível.
+- `nextSibling`: Retorna o nó seguinte ao atual no mesmo nível.
+- Incluem nós de texto e comentários.
+```javaScript
+let li = document.querySelector('li')
+console.log(li.previousSibling) // Pode ser texto ou comentário
+console.log(li.nextSibling) // Próximo nó no mesmo nivel
+```
+___
+
+#### **Outras Propriedades Relacionadas**
+
+- `ownerDocument`
+    - Retorna o objeto `document` ao qual o nó pertence.
+- `isConnected`
+    - Retorna `true` se o nó está anexado à árvore DOM ativa.
+___
+
+##### Exemplo de um HTML completo com as propriedades node
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Propriedades do Node</title>
+</head>
+<body>
+  <div id="container">
+    <!-- Este é um comentário -->
+    <h1>Título Principal</h1>
+    <p>Este é um parágrafo.</p>
+    <p>Outro parágrafo com <strong>texto em negrito</strong>.</p>
+  </div>
+
+  <script>
+    let container = document.getElementById('container');
+
+    console.log('=== Navegação no DOM ===');
+    console.log(container.childNodes); // Todos os nós filhos
+    console.log(container.children);   // Apenas elementos filhos
+    console.log(container.firstChild); // Primeiro nó filho
+    console.log(container.lastChild);  // Último nó filho
+    console.log(container.parentNode); // Nó pai (body)
+    console.log(container.parentElement); // Mesmo que parentNode para elementos
+
+    console.log('=== Verificando existência de filhos ===');
+    console.log(container.hasChildNodes()); // true (tem filhos)
+
+    console.log('=== Trabalhando com texto ===');
+    let primeiroParagrafo = container.children[1]; // <p>Este é um parágrafo.</p>
+    console.log(primeiroParagrafo.textContent); // "Este é um parágrafo."
+    primeiroParagrafo.textContent = "Texto alterado!"; // Altera o texto
+    console.log(primeiroParagrafo.innerText); // Mesmo texto, mas considera estilo
+
+    console.log('=== Propriedades gerais ===');
+    console.log(container.baseURI); // URL da página
+    console.log(container.ownerDocument); // Documento raiz (geralmente `document`)
+
+    console.log('=== Modificando nós ===');
+    let novoParagrafo = document.createElement('p');
+    novoParagrafo.textContent = "Novo parágrafo adicionado!";
+    container.appendChild(novoParagrafo); // Adiciona ao final
+    console.log(container.children); // Atualizado com o novo <p>
+    container.removeChild(novoParagrafo); // Remove o novo parágrafo
+    
+    console.log('=== Clonando nós ===');
+    // Clona o container e seus filhos
+    let cloneContainer = container.cloneNode(true);  
+    console.log(cloneContainer);
+
+  </script>
+</body>
+</html>
+```
