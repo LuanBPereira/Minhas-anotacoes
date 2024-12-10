@@ -2,7 +2,6 @@ ___
 #### Páginas
 - [[Comandos Git]]
 - [[Sincronizando chave SSH no GitHub]]
-- 
 ___
 > Esse documento foi criado pra deixar curiosidades e conhecimentos sobre o Git e Github, quero deixar registrado as coisas que vou aprendendo.
 > Talvez algumas coisas sejam meio verbossas, meio grande, mas acho importante deixar algumas coisas bem explicadas.

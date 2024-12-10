@@ -1,7 +1,7 @@
 ___
 
 A API **Collections** em Java fornece várias classes e interfaces úteis para trabalhar com estruturas de dados, como listas, conjuntos, mapas e filas. Abaixo, vamos explorar algumas das coleções mais usadas, seus métodos e a diferenciação entre as principais classes da API.
-___
+
 ## **Sobrescrevendo o Método `toString()`**
 
 Quando trabalhamos com listas de objetos e queremos exibi-los de forma legível (por exemplo, ao usar o método `System.out.println()`), é necessário sobrescrever o método `toString()` da classe do objeto. O método `toString()` fornece uma representação em string de um objeto, e sem ele, o Java exibirá algo como `NomeDaClasse@hashCode`, o que geralmente não é útil.
@@ -15,7 +15,6 @@ ___
 ### **Exemplo de Sobrescrita do `toString()`**
 
 Vamos supor que você tenha uma classe `Filme` com os atributos `titulo`, `diretor` e `duracao`. Para exibir uma lista de filmes de forma legível, você pode sobrescrever o método `toString()` dessa forma:
-
 ```java
 public class Filme {
 	private String titulo;
@@ -32,7 +31,6 @@ public class Filme {
 ```
 
 Agora, ao imprimir uma lista de filmes, o método `toString()` será chamado automaticamente para cada objeto, e a saída será algo mais amigável e informativo:
-
 ```java
 List<Filme> filmes = new ArrayList<>();
 filmes.add(new Filme("Filme A", "Diretor X", 120));

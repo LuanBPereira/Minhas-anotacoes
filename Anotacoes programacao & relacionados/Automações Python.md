@@ -5,7 +5,6 @@ pyinstaller --onefile nome_do_seu_arquivo.py - compilar o código para .exe
 o arquivo, que foi compilado, vai ser encontrado dentro de uma pasta chamada **dist**.
 
 ##### Código para gerar quantidade X de arquivo .txt
-
 ```python
 import os
 
