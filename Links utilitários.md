@@ -14,6 +14,12 @@ Diagramas desenhados → [https://excalidraw.com/](https://excalidraw.com/)
 
 Diagramas mais profissionais → [https://miro.com/pt/](https://miro.com/pt/)
 
+link para um artigo sobre cookies no Alura → [https://www.alura.com.br/artigos/o-que-sao-cookies-como-funcionam](https://www.alura.com.br/artigos/o-que-sao-cookies-como-funcionam)
+
+link para site das respostas HTTP (por exemplo 404, 500, 200, etc.) → [https://www.rfc-editor.org/rfc/rfc7231.html](https://www.rfc-editor.org/rfc/rfc7231.html)
+
+query params **(PESQUISAR)**
+
 ### Estrutura de dados
 
 Artigos Alura:
