@@ -32,49 +32,6 @@ ___
 Quando você começa a trabalhar em um novo projeto, seja ele um aplicativo, um site ou qualquer outro tipo de sistema, uma das primeiras e mais importantes etapas é entender o que exatamente você precisa construir. Isso é conhecido como levantamento de requisitos. Imagine que você está planejando construir uma casa. Antes de começar, você precisa saber quantos quartos ela terá, se haverá um jardim, quantos andares, entre outros detalhes. No mundo do desenvolvimento de software, esse processo é semelhante e extremamente crucial para o sucesso do projeto.
 ___
 
-## Entrevistas
-
-Uma das técnicas mais diretas para coletar requisitos é através de entrevistas. Aqui, você conversa diretamente com as pessoas que vão usar o sistema (os usuários finais) ou com quem tem uma visão do que o sistema deve fazer (como os stakeholders, que podem ser gerentes, investidores, ou clientes). O objetivo é fazer perguntas que te ajudem a entender o que eles precisam que o sistema faça.
-
-### **Como fazer:**
-
-1. **Prepare-se**: Antes da entrevista, faça sua lição de casa. Pesquise sobre o projeto e quem você vai entrevistar.
-2. **Perguntas abertas**: Use perguntas que incentivem a pessoa a falar mais, como "O que você espera que o sistema faça?".
-3. **Escute ativamente**: Mostre que você está interessado no que a pessoa está dizendo. Isso pode encorajá-la a compartilhar mais informações.
-___
-
-## Questionários
-
-Questionários são úteis quando você precisa coletar informações de muitas pessoas. Eles podem ser distribuídos fisicamente ou online e permitem coletar dados de forma estruturada e em grande escala.
-
-### **Como fazer:**
-
-1. **Questões claras e concisas**: As perguntas devem ser fáceis de entender e responder.
-2. **Tipos de perguntas**: Use uma mistura de perguntas fechadas (sim/não, escolha múltipla) e abertas para coletar uma variedade de dados.
-3. **Pilote seu questionário**: Teste-o com um pequeno grupo antes de enviar para todos. Isso ajuda a identificar e corrigir problemas.
-___
-
-## Observação Direta
-
-Observar as pessoas enquanto elas realizam suas tarefas diárias pode te dar insights valiosos sobre o que elas realmente precisam. Isso pode ser especialmente útil para identificar requisitos que as pessoas podem não perceber ou esquecer de mencionar em entrevistas ou questionários.
-
-### **Como fazer**
-
-1. **Seja discreto**: Você quer observar o comportamento natural das pessoas, então tente não interferir.
-2. **Tome notas**: Anote tudo o que achar relevante, mesmo que pareça pequeno ou insignificante no momento.
-3. **Procure padrões**: Depois da observação, analise suas notas procurando padrões ou problemas recorrentes.
-___
-
-## Motivação
-
-O levantamento de requisitos é a fundação de qualquer projeto de desenvolvimento. Fazer isso corretamente significa economizar tempo, dinheiro e esforço mais tarde, evitando mal-entendidos e retrabalho. Além disso, entender claramente o que os usuários finais precisam garante que o produto final seja útil e bem recebido.
-___
-
-### **Conclusão**
-
-Levantar requisitos é uma arte tanto quanto uma ciência. Usar uma combinação de entrevistas, questionários e observação direta pode te dar uma visão completa do que é necessário para o seu projeto. Lembre-se, a chave para um levantamento de requisitos bem-sucedido é a comunicação clara e eficaz. Quanto melhor você entender o que precisa ser construído, mais suave será o processo de desenvolvimento.
-___
-
 ## Entidades
 
 Em modelagem de dados, o conceito de **entidades** é fundamental para compreender como as informações são organizadas em um sistema de banco de dados. Uma entidade pode ser vista como um objeto ou conceito do mundo real que possui dados relevantes a serem armazenados e gerenciados. A seguir, vamos explorar de forma simplificada o que são entidades e como elas são utilizadas na modelagem de dados.
