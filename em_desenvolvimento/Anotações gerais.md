@@ -2,6 +2,12 @@ ___
 
 Essa página vai ser usada pra anotações que preciso por um tempo, até organiza-la depois. Então, vão ficar por um tempo até ser decidido onde vou usar essas infos.
 ___
+buffer - O termo “buffer” em programação refere-se a uma **área de memória temporária utilizada para armazenar dados enquanto eles estão sendo transferidos entre dois locais**.
+
+varargs - é uma array. 
+Um cuidado que tem que ter com varargs é que ele pode receber NENHUM argumento. Então ele pode receber inumeraveis argumentos como também pode receber nenhum.
+Outro ponto importante é que o varargs tem que ser o ÚLTIMO argumento do método. Se não, ele não compila e vai lançar uma exception.
+Outra coisa: um varargs é uma array, mas uma array NÃO É um varargs. Se o método recebe uma array como parâmetro, tem que colocar uma array como argumento (ex: `[1,2,3,4]`). Já o varargs pode receber entradas sem ser array (ex: `1,2,3,4`). Inclusive, um varargs pode receber uma array como argumento! O caso contrário não.
 
 tipo primitivo - copia o valor
 
