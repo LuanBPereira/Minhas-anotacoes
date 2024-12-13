@@ -6,7 +6,7 @@ Node.js → [https://techguide.sh/pt-BR/path/nodejs/](https://techguide.sh/pt-BR
 Java → [https://techguide.sh/pt-BR/path/java/](https://techguide.sh/pt-BR/path/java/)
 Python → [https://techguide.sh/pt-BR/path/python/](https://techguide.sh/pt-BR/path/python/)
 
-link download Logseq para anotações → [https://logseq.com/](https://logseq.com/)
+link para um artigo sobre métodos de ordenação (JAVA) → https://www.devmedia.com.br/algoritmos-de-ordenacao-em-java/32693
 
 **CODE, FARM, AUTOMATE: The Farmer Was Replaced - nome joguinho de programação legal :] (parecido com python. Na verdade acho que até usa a linguagem python)**
 
