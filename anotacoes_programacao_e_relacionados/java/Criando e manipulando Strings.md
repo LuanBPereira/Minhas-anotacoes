@@ -81,9 +81,6 @@ public class TestaString {
 		// Concatenação, sempre da esquerda pra direita.
 		// Se houver números logo no inicio, vai realizar uma operação e 
 		// depois concatenar
-		
-		
-		
 	}
 }
 
