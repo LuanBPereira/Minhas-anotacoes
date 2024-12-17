@@ -1,5 +1,5 @@
 ___
-## Ideia projeto JAVA com PYTHON
+## Ideia projeto
 
 Fazer um programa em que: pegue um arquvio csv, no caso arquivo do excel, e veja o quanto de gasto teve no mês, o quanto entrou de dinheiro (por exemplo salário, mesada, etc…) e guarde esse valores.
 
