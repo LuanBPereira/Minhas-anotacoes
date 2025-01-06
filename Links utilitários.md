@@ -1,10 +1,8 @@
 ___
 ##### Tech Guide T
 
-React → [https://techguide.sh/pt-BR/path/react/](https://techguide.sh/pt-BR/path/react/)
-Node.js → [https://techguide.sh/pt-BR/path/nodejs/](https://techguide.sh/pt-BR/path/nodejs/)
+Kotlin → https://techguide.sh/pt-BR/path/kotlin-backend/
 Java → [https://techguide.sh/pt-BR/path/java/](https://techguide.sh/pt-BR/path/java/)
-Python → [https://techguide.sh/pt-BR/path/python/](https://techguide.sh/pt-BR/path/python/)
 
 link para um artigo sobre métodos de ordenação (JAVA) → https://www.devmedia.com.br/algoritmos-de-ordenacao-em-java/32693
 
