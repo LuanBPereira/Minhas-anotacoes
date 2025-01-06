@@ -1,7 +1,7 @@
 ___
 ##### Tech Guide T
 
-Kotlin → https://techguide.sh/pt-BR/path/kotlin-backend/
+C#→ https://techguide.sh/pt-BR/path/csharp/
 Java → [https://techguide.sh/pt-BR/path/java/](https://techguide.sh/pt-BR/path/java/)
 
 link para um artigo sobre métodos de ordenação (JAVA) → https://www.devmedia.com.br/algoritmos-de-ordenacao-em-java/32693
